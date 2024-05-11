@@ -1,8 +1,8 @@
-import express from "express";
-import userRoute from "./routes/userRoute";
 import cors from "cors";
+import userRoute from "./routes/userRoute";
+import express from "express";
 
-const port = process.env.port || 3001
+const port = process.env.port || 3001;
 const app = express();
 app.use(cors());
 

@@ -7,11 +7,7 @@ const prisma = new PrismaClient();
 // @access  Public
 
 async function getUser(req: Request, res: Response) {
-  const users = await prisma.users.findMany({
-    include: {
-      myLists: true,
-    },
-  });
+  const users = await prisma.users.findMany({});
   if (users.length === 0) {
     return res.status(200).json({ message: "Sorry, no users found teehee." });
   }
@@ -44,10 +40,7 @@ async function deleteUser(req: Request, res: Response) {
 
   //if successful, delete list.
   const result = await prisma.users.delete({
-    where: { id: userId },
-    include: {
-      myLists: true,
-    },
+    where: { id: userId }
   });
 
   if (!result) {
