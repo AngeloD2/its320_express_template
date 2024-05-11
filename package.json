@@ -1,14 +1,12 @@
 {
   "name": "its320_be",
   "version": "1.0.0",
-  "description": "backend for angular projec",
+  "description": "backend for angular project",
   "main": "index.ts",
   "scripts": {
     "build": "tsc index.ts",
     "dev": "nodemon index.ts"
   },
-  "author": "angelo dato",
-  "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.11.0",
     "@types/cors": "^2.8.17",

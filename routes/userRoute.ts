@@ -1,4 +1,3 @@
-// const upload = require('../middleware/upload')
 import express from "express";
 import usersController from "../controllers/usersController";
 

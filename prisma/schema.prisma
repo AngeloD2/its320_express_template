@@ -17,23 +17,5 @@ model Users {
   id       String @id @default(auto()) @map("_id") @db.ObjectId
   username String
   password String
-
-  myLists Lists[]
 }
 
-model Lists {
-  id     String   @id @default(auto()) @map("_id") @db.ObjectId
-  title  String
-  userId String[] @db.ObjectId
-  Item   Item[]
-
-  User Users? @relation(references: [id], fields: [userId])
-}
-
-model Item {
-  id       String  @id @default(auto()) @map("_id") @db.ObjectId
-  listId   String? @unique @db.ObjectId
-  itemName String
-
-  itemList Lists? @relation(references: [id], fields: [listId])
-}
