@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "backend for angular project",
   "main": "index.ts",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "start": "ts-node index.ts",
